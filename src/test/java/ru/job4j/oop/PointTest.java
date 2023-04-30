@@ -11,16 +11,16 @@ public class PointTest {
         Point b = new Point(2, 0);
         double expected = 2;
         double result = a.distance(b);
-        assertThat((Math.abs(result - expected)) < 0.01).isTrue();
+        assertThat(result).isCloseTo(expected, offset(0.001));
     }
 
     @Test
     public void whenA11ToB20Then1dot41() {
         Point a = new Point(1, 1);
         Point b = new Point(2, 0);
-        double expected = 1.41;
+        double expected = 1.414;
         double result = a.distance(b);
-        assertThat((Math.abs(result - expected)) < 0.01).isTrue();
+        assertThat(result).isCloseTo(expected, offset(0.001));
     }
 
     @Test
@@ -29,15 +29,15 @@ public class PointTest {
         Point b = new Point(2, 0);
         double expected = 2;
         double result = a.distance(b);
-        assertThat((Math.abs(result - expected)) < 0.01).isTrue();
+        assertThat(result).isCloseTo(expected, offset(0.001));
     }
 
     @Test
     public void whenA33ToB20Then3dot16() {
         Point a = new Point(3, 3);
         Point b = new Point(2, 0);
-        double expected = 3.16;
+        double expected = 3.162;
         double result = a.distance(b);
-        assertThat((Math.abs(result - expected)) < 0.01).isTrue();
+        assertThat(result).isCloseTo(expected, offset(0.001));
     }
 }
