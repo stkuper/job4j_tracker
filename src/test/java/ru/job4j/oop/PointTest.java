@@ -40,4 +40,13 @@ public class PointTest {
         double result = a.distance(b);
         assertThat(result).isCloseTo(expected, offset(0.001));
     }
+
+    @Test
+    public void whenA012ToB432Then4dot472() {
+        Point a = new Point(0, 1, 2);
+        Point b = new Point(4, 3, 2);
+        double result = a.distance3d(b);
+        double expected = 4.472;
+        assertThat(result).isCloseTo(expected, offset(0.001));
+    }
 }
