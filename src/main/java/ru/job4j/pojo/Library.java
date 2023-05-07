@@ -21,7 +21,7 @@ public class Library {
         }
         System.out.println();
         for (int i = 0; i < books.length; i++) {
-            if (books[i].getName().equals("Clean code")) {
+            if ("Clean code".equals(books[i].getName())) {
                 System.out.println("The book \"" + books[i].getName() + "\" consist of "
                                    + books[i].getPages() + " pages.");
             }
