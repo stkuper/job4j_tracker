@@ -1,4 +1,7 @@
-package ru.job4j.oop;
+package ru.job4j.tracker.oop;
+
+import ru.job4j.tracker.oop.Freshman;
+import ru.job4j.tracker.oop.Student;
 
 public class College {
     public static void main(String[] args) {
