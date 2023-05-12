@@ -38,7 +38,6 @@ public class StartUI {
                 } else {
                     System.out.println("Ошибка замены заявки.");
                 }
-                System.out.println("Заявка изменена успешно.");
             } else if (select == 3) {
                 System.out.println("=== Delete item ===");
                 System.out.print("Enter id: ");
