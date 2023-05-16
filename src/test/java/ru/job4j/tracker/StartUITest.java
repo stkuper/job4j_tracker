@@ -133,7 +133,7 @@ public class StartUITest {
         Item item2 = tracker.add(new Item("test2"));
         Item item3 = tracker.add(new Item("test3"));
         Input input = new StubInput(new String[]{
-                "0", "2", "1"
+                "0", String.valueOf(item2.getId()), "1"
         });
         UserAction[] actions = new UserAction[]{
                 new FindItemByIdAction(out),
@@ -161,7 +161,7 @@ public class StartUITest {
         Item item2 = tracker.add(new Item("test2"));
         Item item3 = tracker.add(new Item("test3"));
         Input input = new StubInput(new String[]{
-                "0", "test3", "1"
+                "0", item3.getName(), "1"
         });
         UserAction[] actions = new UserAction[]{
                 new FindItemByNameAction(out),
