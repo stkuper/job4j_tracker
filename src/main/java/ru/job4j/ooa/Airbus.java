@@ -7,9 +7,6 @@ public final class Airbus extends Aircraft {
 
     public Airbus(String name) {
         this.name = name;
-        System.out.println(this.toString());
-        this.printModel();
-        this.printCountEngine();
     }
 
     public String getName() {
