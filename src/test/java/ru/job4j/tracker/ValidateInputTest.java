@@ -30,15 +30,16 @@ public class ValidateInputTest {
     @Test
     public void whenManyValidInput() {
         Output out = new StubOutput();
-        String[] numbers = new String[]{
+        Input in = new StubInput(new String[]{
                 "0", "1", "2"
-        };
-        Input in = new StubInput(numbers);
+        });
         ValidateInput input = new ValidateInput(out, in);
-        for (String num : numbers) {
-            int selected = input.askInt("Enter menu: ");
-            assertThat(selected).isEqualTo(Integer.parseInt(num));
-        }
+        int selected = input.askInt("Enter menu: ");
+        assertThat(selected).isEqualTo(0);
+        selected = input.askInt("Enter menu: ");
+        assertThat(selected).isEqualTo(1);
+        selected = input.askInt("Enter menu: ");
+        assertThat(selected).isEqualTo(2);
     }
 
     @Test
