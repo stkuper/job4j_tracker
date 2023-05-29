@@ -12,5 +12,13 @@ public class UsageMap {
             String value = map.get(key);
             System.out.println(key + " = " + value);
         }
+        System.out.println();
+        map.put("stklipper@gmail.com", "Петров Пётр Петрович");
+        map.put("divanov@gmail.com", "Сидоров Сидор Сидорович");
+        map.put("alexgon@gmail.com", "Иванов Иван Иваныч");
+        for (String key : map.keySet()) {
+            String value = map.get(key);
+            System.out.println(key + " = " + value);
+        }
     }
 }
