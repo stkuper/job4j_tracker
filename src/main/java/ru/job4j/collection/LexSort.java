@@ -20,5 +20,4 @@ public class LexSort implements Comparator<String> {
     public static boolean isNumber(String str) {
         return str.matches("-?\\d+");
     }
-
 }
