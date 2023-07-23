@@ -5,6 +5,7 @@ import java.util.Objects;
 /**
  * Класс описывает инициализацию экземпляра класса, работу геттеров и сеттеров для полей
  * экземпляра класса, а так же переопределяет работу для методов сравнения и хэш - кода
+ *
  * @author STAS KUPRIYANOV
  * @version 1.0
  */
@@ -15,8 +16,9 @@ public class Account {
     /**
      * Конструктор принимает поля requisite и balance и инициализирует ими
      * текущий экземпляр класса
+     *
      * @param requisite реквизит текущего экземпляра
-     * @param balance баланс текущего экземпляра
+     * @param balance   баланс текущего экземпляра
      */
     public Account(String requisite, double balance) {
         this.requisite = requisite;
@@ -25,6 +27,7 @@ public class Account {
 
     /**
      * Метод возвращает поле requisite текущего экземпляра
+     *
      * @return requisite реквизит текущего экземпляра
      */
     public String getRequisite() {
@@ -33,6 +36,7 @@ public class Account {
 
     /**
      * Метод принимает и устанавливает поле requisite для текущего экземпляра
+     *
      * @param requisite реквизит текущего экземпляра
      */
     public void setRequisite(String requisite) {
@@ -41,6 +45,7 @@ public class Account {
 
     /**
      * Метод возвращает поле balance текущего экземпляра
+     *
      * @return balance баланс текущего экземпляра
      */
     public double getBalance() {
@@ -49,6 +54,7 @@ public class Account {
 
     /**
      * Метод принимает и устанавливает поле balance для текущего экземпляра
+     *
      * @param balance баланс текущего экземпляра
      */
     public void setBalance(double balance) {
@@ -57,6 +63,7 @@ public class Account {
 
     /**
      * Метод принимает другой экземпляр и сравнивает его с текущим по полю requisite
+     *
      * @param o другой экземпляр для сравнения
      * @return возвращает true если равны, false если нет
      */
@@ -74,6 +81,7 @@ public class Account {
 
     /**
      * Метод возвращает хэш - код экземпляра для сравнения
+     *
      * @return возвращает хэш - код экземпляра
      */
     @Override

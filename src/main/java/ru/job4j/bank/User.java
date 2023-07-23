@@ -5,6 +5,7 @@ import java.util.Objects;
 /**
  * Класс описывает инициализацию экземпляра класса, работу геттеров и сеттеров для полей
  * экземпляра класса, а так же переопределяет работу методов сравнения и хэш - кода
+ *
  * @author STAS KUPRIYANOV
  * @version 1.0
  */
@@ -13,8 +14,9 @@ public class User {
     private String username;
 
     /**
-     *Конструктор принимает поля passport и username и инициализирует ими
+     * Конструктор принимает поля passport и username и инициализирует ими
      * текущий экземпляр класса
+     *
      * @param passport пасспорт текущего экземпляра
      * @param username имя текущего экземпляра
      */
@@ -23,8 +25,10 @@ public class User {
         this.username = username;
     }
 
-    /**\
+    /**
+     * \
      * Метод возвращает поле passport текущего экземпляра
+     *
      * @return passport пасспорт текущего экземпляра
      */
     public String getPassport() {
@@ -33,6 +37,7 @@ public class User {
 
     /**
      * Метод принимает и устанавливает поле passport для текущего экземпляра
+     *
      * @param passport пасспорт текущего экземпляра
      */
     public void setPassport(String passport) {
@@ -41,6 +46,7 @@ public class User {
 
     /**
      * Метод возвращает поле username текущего экземпляра
+     *
      * @return username имя текущего экземпляра
      */
     public String getUsername() {
@@ -49,6 +55,7 @@ public class User {
 
     /**
      * Метод принимает и устанавливает поле username для текущего экземпляра
+     *
      * @param username имя текущего экземпляра
      */
     public void setUsername(String username) {
@@ -56,7 +63,8 @@ public class User {
     }
 
     /**
-     *Метод принимает другое экземпляр и сравнивает его с текущим
+     * Метод принимает другое экземпляр и сравнивает его с текущим
+     *
      * @param o другой экземпляр для сравнения
      * @return возвращает true если равны, false если нет
      */
@@ -74,6 +82,7 @@ public class User {
 
     /**
      * Метод возвращает хэш - код экземпляра для сравнения
+     *
      * @return возвращает хэш - код экземпляра
      */
     @Override
