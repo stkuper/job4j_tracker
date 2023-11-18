@@ -93,15 +93,23 @@ public class SqlTracker implements Store {
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 while (resultSet.next()) {
-                    result.add(new Item(resultSet.getInt("id"),
-                            resultSet.getString("name"),
-                            resultSet.getTimestamp("created").toLocalDateTime()));
+                    result.add(getItem(resultSet));
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;
+    }
+
+    private static Item getItem(ResultSet resultSet) {
+        try {
+            return new Item(resultSet.getInt("id"),
+                    resultSet.getString("name"),
+                    resultSet.getTimestamp("created").toLocalDateTime());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -112,9 +120,7 @@ public class SqlTracker implements Store {
             preparedStatement.setString(1, key);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 while (resultSet.next()) {
-                    result.add(new Item(resultSet.getInt("id"),
-                            resultSet.getString("name"),
-                            resultSet.getTimestamp("created").toLocalDateTime()));
+                    result.add(getItem(resultSet));
                 }
             }
         } catch (SQLException e) {
