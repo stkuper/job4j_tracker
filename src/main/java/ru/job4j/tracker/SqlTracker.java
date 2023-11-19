@@ -102,14 +102,10 @@ public class SqlTracker implements Store {
         return result;
     }
 
-    private static Item getItem(ResultSet resultSet) {
-        try {
+    private Item getItem(ResultSet resultSet) throws SQLException {
             return new Item(resultSet.getInt("id"),
                     resultSet.getString("name"),
                     resultSet.getTimestamp("created").toLocalDateTime());
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Override
@@ -144,6 +140,9 @@ public class SqlTracker implements Store {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+        if (item.equals(new Item())) {
+            return null;
         }
         return item;
     }
