@@ -3,5 +3,3 @@ create table items (
     name text,
     created timestamp
 );
-SELECT * FROM items;
-TRUNCATE TABLE items RESTART IDENTITY;
