@@ -1,6 +1,18 @@
 package ru.job4j.tracker;
 
 import org.junit.jupiter.api.Test;
+import ru.job4j.tracker.action.CreateAction;
+import ru.job4j.tracker.action.DeleteAction;
+import ru.job4j.tracker.action.EditAction;
+import ru.job4j.tracker.action.ExitAction;
+import ru.job4j.tracker.action.FindItemByIdAction;
+import ru.job4j.tracker.action.FindItemByNameAction;
+import ru.job4j.tracker.action.ShowAllAction;
+import ru.job4j.tracker.action.UserAction;
+import ru.job4j.tracker.input.Input;
+import ru.job4j.tracker.input.StubInput;
+import ru.job4j.tracker.output.Output;
+import ru.job4j.tracker.output.StubOutput;
 
 import java.util.ArrayList;
 import java.util.List;

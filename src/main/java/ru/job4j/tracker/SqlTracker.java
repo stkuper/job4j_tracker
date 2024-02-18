@@ -1,8 +1,16 @@
 package ru.job4j.tracker;
 
+import ru.job4j.tracker.store.Store;
+
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -103,9 +111,9 @@ public class SqlTracker implements Store {
     }
 
     private Item getItem(ResultSet resultSet) throws SQLException {
-            return new Item(resultSet.getInt("id"),
-                    resultSet.getString("name"),
-                    resultSet.getTimestamp("created").toLocalDateTime());
+        return new Item(resultSet.getInt("id"),
+                resultSet.getString("name"),
+                resultSet.getTimestamp("created").toLocalDateTime());
     }
 
     @Override
