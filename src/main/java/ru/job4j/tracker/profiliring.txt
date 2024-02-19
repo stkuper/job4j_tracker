@@ -1,0 +1,16 @@
+Профилирование проекта tracker производится командой jmap -histo <pid>
+с настройкой -XX:+UseZGC
+При запуске программы с 0 заявок  Total  77938 instances,  4758128 bytes
+При добавлении 1000 заявок        Total  83518 instances,  5113880 bytes
+При удалении всех заявок          Total  83963 instances,  5135264 bytes
+При добавлении 100000 заявок      Total  84587 instances,  5161496 bytes
+При удалении всех заявок          Total  84044 instances,  5132608 bytes
+При добавлении 10000000 заявок    Total  125120 instances, 7420264 bytes
+Удалил все заявки, произведена настройка запуска с параметрами heap в 30 mb
+-Xmx30m -Xms30m -XX:+UseZGC
+При добавлении 100000 заявок      Total  81177 instances,  4955032 bytes
+При попытки удаления или просмотра всех заявок происходит ошибка
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+Для удаления всех 100000 заявок произведена настройка запуска с параметрами heap в 50 mb
+-Xmx50m -Xms50m -XX:+UseZGC
+После удаления всех заявок        Total   77548 instances, 4785704 bytes
